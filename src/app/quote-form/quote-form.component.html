@@ -12,7 +12,7 @@
       </div>
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <!-- <input type="Quote Title" id="form4Example2" class="form-control" /> -->
+       
         <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.title" name="title" #name='ngModel' required>
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           <p>Name is required</p>
