@@ -28,7 +28,7 @@
       </div>
       <!-- Quote Author -->
       <div class="form-outline mb-4">
-          <!-- <input type="Quote Author" id="form4Example2" class="form-control" /> -->
+         
           <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.author" name="author" #name='ngModel' required>
           <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
             <p>Name is required</p>
