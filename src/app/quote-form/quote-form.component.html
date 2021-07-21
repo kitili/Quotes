@@ -38,9 +38,7 @@
       
     
       <div class="form-check d-flex justify-content-center mb-4">
-        <!-- <input
-          class="form-check-input me-2"
-          type="checkbox" -->
+        
           <input type='date' id="creation" [(ngModel)]="newQuote" name="completeDate" #completeDate="ngModel" required>
           <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
             <p>Date is required</p>
