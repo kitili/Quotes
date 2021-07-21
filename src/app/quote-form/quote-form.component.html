@@ -1,4 +1,67 @@
-
+<div id="idc">
+    <form #addForm='ngForm'(ngSubmit)="submitQuote()" >
+      <!-- Name input -->
+      <div class="form-outline mb-4">
+        <!-- <input type="text" id="form4Example1" class="form-control" /> -->
+        <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p>Name is required</p>
+        </div>
+        
+        <label class="form-label" for="form4Example1">Your Name</label>
+      </div>
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <!-- <input type="Quote Title" id="form4Example2" class="form-control" /> -->
+        <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.title" name="title" #name='ngModel' required>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p>Name is required</p>
+        </div>
+        <label class="form-label" for="form4Example2">Quote Title</label>
+      </div>
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote" name="description" #description="ngModel" required></textarea>
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+          <p>Description is required</p>
+        </div>
+      </div>
+      <!-- Quote Author -->
+      <div class="form-outline mb-4">
+          <!-- <input type="Quote Author" id="form4Example2" class="form-control" /> -->
+          <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.author" name="author" #name='ngModel' required>
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <p>Name is required</p>
+          </div>
+          <label class="form-label" for="form4Example2">Quote  Author</label>
+        </div>
+      
+      <!-- <div> -->
+          <!-- <input type="date">
+      </div> -->
+      <!-- Checkbox <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              <p>Name is required</p>
+            </div> -->
+      <div class="form-check d-flex justify-content-center mb-4">
+        <!-- <input
+          class="form-check-input me-2"
+          type="checkbox" -->
+          <input type='date' id="creation" [(ngModel)]="newQuote" name="completeDate" #completeDate="ngModel" required>
+          <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+            <p>Date is required</p>
+          </div>
+      
+        <label class="form-check-label" for="form4Example4">
+          Send me a copy of this message
+        </label>
+      </div>
+      <!-- Submit button -->
+      <div id="show">
+      <button type="submit" class="btn btn-primary btn-block mb-4">submitQuote</button>
+      </div>
+    </form>
+    </div>
       
       
       

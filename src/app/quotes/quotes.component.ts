@@ -20,5 +20,13 @@ export class QuotesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  deleteGoal(index){
+    this.quotes.splice(index,1)
+  }
+  addNewQuote(quote){
+    quote.date = new Date()
+    this.quotes.push(quote)
+    console.log(this.quotes)
+    }
 
 }

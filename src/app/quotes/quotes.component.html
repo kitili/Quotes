@@ -14,21 +14,25 @@
     </div>
     </section>
 
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+   
 
-    <div style="width: 80vw;">
-    <form >
+
+    <!-- <div style="width: 80vw;">
+      <div class="container-fluid">
+    <form > -->
         <!-- Name input -->
-        <div class="form-outline mb-4">
+        <!-- <div class="form-outline mb-4">
           <input type="text"style="width: 30%; height:5vh;" id="form4Example1"placeholder='name' class="form-control" />
          
-        </div>
+        </div> -->
         <!-- Email input -->
-        <div class="form-outline mb-4">
+        <!-- <div class="form-outline mb-4">
           <input type="email"style="width: 30%; height:5vh;" id="form4Example2"placeholder="title" class="form-control" />
-         
-        </div>
+         ""
+        </div> -->
         <!-- Message input -->
-        <div class="form-outline mb-4">
+        <!-- <div class="form-outline mb-4">
           <textarea class="form-control"style="width: 30%; height:5vh;" id="form4Example3" placeholder ="quote"rows="4"></textarea>
          
         </div>
@@ -36,14 +40,22 @@
             <input type="email"style="width: 30%; height:5vh;"id="form4Example2" placeholder ="author"class="form-control" />
   
 
-          </div>
+          </div> -->
     
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+        <!-- <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
       </form>
-    </div>
-    
-    <app-details></app-details>
+    </div> -->
+    <ul>
+      <li *ngFor="let quote of quotes; let i = index">
+     
+        <app-details *ngIf="quote.showDescription" [quote]="quote"(delete)="deleteGoal(i)" ></app-details>
+     </li>
+   </ul>
+
+
+  
+  
     <!-- <app-directive></app-directive> -->
           
 
