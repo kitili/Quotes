@@ -1,7 +1,7 @@
 <div class="container">
-<div class="row">
-    <div class="col-sm-6">
-      <div class="card">
+<div class="row ">
+    <div class="col-sm-6" >
+      <div class="cards mt-3">
         <div class="card-body"style="color:red;">
           <h5 class="card-title"> {{quote.name}}</h5>
           <p class="card-text">{{quote.title}}</p>
@@ -11,9 +11,9 @@
           <button type="button" (click) ="addLikes()" class="btn btn-lg btn-primary upvote" > like</button> {{likes}} <br>
           <button type="button"(click) ="addDislikes()" class="btn btn-secondary btn-lg" >dislike</button>{{dislikes}} <br> <br>
           <button (click) = "quoteDelete()"class = "btn  btn-danger btn-lg">Delete</button>
-         
+<!--          
 
-          <app-directive></app-directive>
+          <app-directive></app-directive> -->
         </div>
       </div>
     </div>

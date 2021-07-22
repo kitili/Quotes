@@ -1,5 +1,15 @@
 #idc{
     width:50vw;
     font-size: 2vw;
-    color: red;
+    color:whitesmoke;
 }
+.my-form{
+    background-color:rgb(119, 116, 111) ;
+    padding: 20px;
+    
+}
+input[type=text]{
+    border-radius: 18px;
+    padding: 20px;
+}
+
